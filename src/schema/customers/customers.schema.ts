@@ -83,22 +83,3 @@ export class CustomerAnonymized {
 }
 
 export const CustomerAnonymizedModel = getModelForClass(CustomerAnonymized)
-
-@InputType()
-export class CreateCustomersInput {
-    @IsString({ message: 'FirstName must be a string' })
-    @Field(() => String)
-    firstName: string
-
-    @IsEmail({}, { message: 'Field email must be an email type' })
-    @Field(() => String)
-    email: string
-
-    @IsString({ message: 'LastName must be a string' })
-    @Field(() => String)
-    lastName: string
-
-    @IsString({ message: 'Address must be a string' })
-    @Field(() => String)
-    address: Address
-}
